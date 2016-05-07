@@ -1,0 +1,28 @@
+{
+  "name": "IoTSpeed",
+  "description": "Simple application to test the speed of connection establishment and message delivery.",
+  "main": "",
+  "authors": [
+    "Michael Hu"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-animate": "^1.5.5",
+    "angular-aria": "^1.5.5",
+    "angular-messages": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "angular-material": "^1.0.8",
+    "ngstorage": "^0.3.10",
+    "async": "^1.5.2"
+  }
+}

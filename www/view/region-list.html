@@ -1,0 +1,36 @@
+<md-toolbar>
+  <div class="md-toolbar-tools">
+    AWS IoT Speed Test
+  </div>
+</md-toolbar>
+<md-content style="padding-bottom: 68px;">
+  <md-list>
+    <md-list-item class="md-2-line"
+                  ng-repeat="region in regions"
+                  ng-class="'ck-state-bg-' + latestTests[region.id].state">
+      <div class="md-list-item-text" layout="column">
+        <h3>{{region.name}}</h3>
+        <h4 layout="row">
+          <span flex="50">
+            Conn: {{latestTests[region.id].conn ? latestTests[region.id].conn + 'ms' : ''}}
+          </span>
+          <span flex="50">
+            Ping: {{latestTests[region.id].ping? latestTests[region.id].ping + 'ms' : ''}}
+          </span>
+        </h4>
+      </div>
+      <md-button class="md-secondary md-icon-button" aria-label="Detail"
+                 ng-href="#/region/{{region.id}}" ng-disabled="inTest">
+        <md-icon>navigate_next</md-icon>
+      </md-button>
+      <md-divider ng-if="!$last"></md-divider>
+    </md-list-item>
+  </md-list>
+</md-content>
+<div class="ck-fixed-bottom">
+  <md-button class="md-raised md-primary" aria-label="Start"
+             ng-click="start()" ng-disabled="inTest">
+    <span ng-if="inTest">{{spendTime}} seconds</span>
+    <span ng-if="!inTest">Start</span>
+  </md-button>
+</div>

@@ -1,0 +1,24 @@
+md-toolbar {
+  position: fixed;
+}
+md-content {
+  padding-top: 56px;
+}
+.ck-fixed-bottom {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+}
+.ck-fixed-bottom .md-button {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-transform: none;
+}
+.ck-state-bg-conn {
+  background-color: rgba(255, 235, 59, 0.6);
+}
+.ck-state-bg-ping {
+  background-color: rgba(139,195,74,0.7);
+}

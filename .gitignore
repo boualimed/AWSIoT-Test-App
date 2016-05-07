@@ -1,0 +1,12 @@
+# Mac
+.DS_Store
+
+# WebStorm
+.idea
+
+# Copied www directory in each platform
+/platforms/ios/www/
+/platforms/android/assets/www/
+
+# Libs managed by bower
+/www/lib/

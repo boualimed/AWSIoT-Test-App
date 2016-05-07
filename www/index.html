@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com wss://*.amazonaws.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="lib/angular-material/angular-material.min.css">
+        <link rel="stylesheet" type="text/css" href="css/material-icons.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>AWS IoT Speed Test</title>
+    </head>
+    <body>
+        <div ng-app="IoTApp">
+            <div ng-view></div>
+        </div>
+        <script type="text/javascript" src="lib/aws-iot/aws-sdk-2.3.7.min.js"></script>
+        <script type="text/javascript" src="lib/aws-iot/aws-iot-sdk.js"></script>
+        <script type="text/javascript" src="lib/aws-iot/add-to-window.js"></script>
+        <script type="text/javascript" src="lib/angular/angular.min.js"></script>
+        <script type="text/javascript" src="lib/angular-animate/angular-animate.min.js"></script>
+        <script type="text/javascript" src="lib/angular-aria/angular-aria.min.js"></script>
+        <script type="text/javascript" src="lib/angular-messages/angular-messages.min.js"></script>
+        <script type="text/javascript" src="lib/angular-route/angular-route.min.js"></script>
+        <script type="text/javascript" src="lib/angular-material/angular-material.min.js"></script>
+        <script type="text/javascript" src="lib/ngstorage/ngStorage.min.js"></script>
+        <script type="text/javascript" src="lib/async/dist/async.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
